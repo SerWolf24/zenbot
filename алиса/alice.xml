@@ -30,6 +30,10 @@
         <output value="Пока-пока, $UserName!"/>
     </input>
 
+    <input pattern="* пока *">
+ <output value='{"text":"Пока!","end_session":false,"buttons":[]}'/>
+</input>
+    
     <input pattern="[* (кто|что) так*] $Text">
         <context id="name" if="empty($UserName)"/>
 
